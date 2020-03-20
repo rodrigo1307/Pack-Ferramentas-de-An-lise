@@ -1,0 +1,125 @@
+B2_QATU > 0 .AND. B2_LOCAL== "01" .AND. ( B2_FILIAL== "00" .OR. B2_FILIAL== "02" )
+/* Retorna dados com quantidade maior que zero */
+
+
+C6_CLI== "999999" .AND. Empty(C6_BLQ) .AND. Empty(C6_NOTA) .AND. C6_LOJA== "0011"
+/* Retorna pedidos em aberto de determinada unidade (necessário alterar a unidade) */
+
+	
+B2_QATU > B2_RESERVA .AND. B2_LOCAL== "01" .AND. ( B2_FILIAL== "00" .OR. B2_FILIAL== "02" )
+/* Retorna dados com quantidade maior que o reservado */
+
+
+C6_FILIAL=="11" .AND. C6_CLI=="999999" .AND. Empty(C6_BLQ) .AND. Empty(C6_NOTA)
+
+
+
+------------------------------------------------------------------
+PENDÊNCIA:
+
+B2_LOCAL== "01" .AND. B2_FILIAL== "15" .AND. B2_QATU < (B2_RESERVA + B2_QPEDVEN)
+
+B2_LOCAL== "01" .AND. (B2_QATU < (B2_RESERVA + B2_QPEDVEN) .OR. B2_QATU < B2_QPEDVEN)
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+x = document.getElementsByTagName("body")
+y = 1
+function girar(){
+x[0].setAttribute("style","transform: rotate(" + y + "deg)")
+y++
+}
+setInterval(girar, 1)
+
+-----------------
+x = document.getElementsByTagName("body")
+y = 1
+z = 0
+function girar(){
+if (y 
+x[0].setAttribute("style","transform: rotate(" + y + "deg)")
+y = y * -1
+if (y > 0) {
+y++
+} else {
+y--
+}
+}
+setInterval(girar, 200)
+-------------
+
+
+x = document.getElementsByTagName("body")
+y = 0
+z = 1
+function girar(){
+ if (y < z){
+ x[0].setAttribute("style","transform: rotate(" + y + "deg)")
+ y++
+ } else {
+   if (y > z) {
+   x[0].setAttribute("style","transform: rotate(" + y + "deg)") 
+   y--
+  } else {
+    if (y == z && z > 0){
+    z++
+    z = z * -1
+} else {
+  z--
+  z = z * -1
+}
+
+}
+ }
+}
+a = setInterval(girar, 1)
+clearInterval(a)
+
+
+
+
+
+-------------------
+x = document.getElementsByTagName("body")
+y = 0
+function facaumbarrilgirar(){
+if(y == 0){
+y = 1
+a = setInterval(facaumbarrilgirar, 1)
+} else {
+if(y <= 360){
+x[0].setAttribute("style","transform: rotate(" + y + "deg)")
+y++
+} else {
+clearInterval(a)
+}
+}
+}
+
+
